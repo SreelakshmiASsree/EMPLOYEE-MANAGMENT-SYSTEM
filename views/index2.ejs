@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,600;9..40,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/style1.css">
+</head>
+
+<body>
+    <div class="body_container">
+        <div class="main d-flex">
+            <div class="side_menu">
+                <div class="header_section p-4">
+                    <h3 class="head m-0">Employee </h3>
+                    <span>Management</span>
+                </div>
+                <ul class="menu_list">
+                    <li><a href="#"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                    <li><a href="http://localhost:3000/"><i class="fa-solid fa-chart-simple"></i>Employee</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></li>
+                    <li><a href="#"><i class="fa-solid fa-lock"></i>Logout</a></li>
+                </ul>
+                <div class="footer px-4 mb-3">
+                    <p>powered by</p>
+                    <span><img src="/image/image 1.png"></span>
+                </div>
+            </div>
+            <div class="main_section">
+                <div class="hero_section d-flex">
+                    <div class="title p-4">
+                        <h6><a href="http://localhost:3000/">Dashboard/Employees</a>/Employee Details</h6>
+                        <h3>Employee Details</h3>
+                    </div>
+                    <div class="search_bar mt-4 d-flex ">
+                        <!-- <div class="search d-flex">
+                            <div class="search_icon">
+                                <i class="fa-solid  fa-magnifying-glass"></i>
+                            </div>
+                            <input type="search" class="search_sub form-control ps-4 " placeholder="Search">
+                        </div>
+                        <div class="icon">
+                            <i class="fa-regular fa-bell"></i>
+                        </div>
+                        <img src="/image/img2.png" alt=""> -->
+                    </div>
+                </div>
+                <div class=" main-card card  rounded-4">
+                    <div class="bg_profile ">
+                        <img src="/image/bg img.png" class="card-img-top" alt="...">
+                        <div class="profile">
+                            <img src="" alt="" id="viewimage">
+                        </div>.
+                    </div>
+                    <div class="personal_data d-flex">
+                        <h4 id="user-Name">Mr.Michael Johnson</h4>
+                        <p id="user-Email">michaeljohnson@example.com</p>
+                    </div>
+                    <div class="view-details d-flex gap-4 flex-column px-4 ">
+                        <div class="d-flex gap-4">
+                            <div class="detials-box">
+                                <h5>Gender</h5>
+                                <h6 id="view-Gender">Male</h6>
+                            </div>
+                            <div class="detials-box">
+                                <h5 >Age</h5>
+                                <h6 id="view-Age">38</h6>
+                            </div>
+                            <div class="detials-box">
+                                <h5>Date of Birth</h5>
+                                <h6 id="view-Dob">20 December 1985</h6>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-4">
+                            <div class="detials-box">
+                                <h5>Mobile Number</h5>
+                                <h6 id="view-Phone">9876543210</h6>
+                            </div>
+                            <div class="detials-box">
+                                <h5>Qualification</h5>
+                                <h6 id="view-Quali">Bachlor degree</h6>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-4">
+                            <div class="detials-box">
+                                <h5>Address</h5>
+                                <h6 id="view-Address">789 pine st dummy address,chicago,texa,USA 123456</h6>
+                            </div>
+                            <div class="detials-box">
+                                <h5>username</h5>
+                                <h6 id="view-username">michael johnson</h6>
+                            </div>
+                        </div>
+
+                        <div class="detail-button pt-4 pb-2 d-flex justify-content-end gap-2">
+                            <button type="button" class="btn btn-danger" onclick="dele()">Delete</button>
+                            <button type="button" class="btn btn-primary" onclick="viewEditformopen()">Edit Details</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <footer>
+                    <div class="footer_sectn d-flex ">
+                        <div class="copy_right">
+                            <p>© 2023 All Rights Reserved. Stackup</p>
+                        </div>
+                        <div class="link">
+                            <a href="#">Terms of Use</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+       
+        
+
+        <!-- edit view page -->
+
+        <div class="edit_form" id="vieweditform">
+            <div class="page col-lg-6 col-md-12 p-0 mt-4 ">
+                <div class="card edit_card rounded-4 ">
+                    <header class="heading">
+                        <h3 class="basic py-3 px-3 fw-bold">Edit Employee</h3>
+                        <button type="button" class="btn close_btn m-2" onclick="viewEditformClose()"><i
+                                class="fa-solid fa-xmark"></i></button>
+                    </header>
+
+                    <div class="body  px-4">
+                        <div class="upload-section d-flex gap-3 mb-4">
+                            <div class="upload-bg">
+                                <div class="upload-image">
+                                    <img src="" alt="" id="editviewimage">
+                                </div>
+                            </div>
+                            <button type="button" class="btn mini-btn rounded-4 px-4 py-2">Change</button>
+                        </div>
+                        <form id="formedit">
+                            <div class="row ">
+                                <div class=" col-md-6 col-lg-4 mb-4">
+                                    <label for="Salutation" class="form_label  mb-2">Salutation</label>
+                                    <select class="form-control form-select rounded-4" id="Salutation">
+                                        <option value="select">select</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Mr">Mr</option>
+                                        <option value="Miss">Miss</option>
+                                    </select>
+                                    <div class="errormsg"></div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <label for="firstName" class="form_label  mb-2 ">First Name</label>
+                                    <input type="text" class="form-control rounded-4" placeholder="john"
+                                        id="firstName">
+                                    </select>
+                                    <div class="errormsg"></div>
+                                </div>
+                                <div class=" col-md-12 col-lg-4 mb-4">
+                                    <label for="lastName" class="form_label  mb-2">Last Name</label>
+                                    <input type="text" class="form-control rounded-4" placeholder="doe"
+                                        id="lastName">
+                                        <div class="errormsg"></div>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class=" col-lg-6 mb-4">
+                                    <label for="email" class="form_label mb-2">Email</label>
+                                    <input type="text" class="form-control rounded-4" placeholder="mail@simmmple.com"
+                                        id="email">
+                                        <div class="errormsg"></div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <label for="phone" claoss="form_label  mb-2">Mobile Number</label>
+                                    <input type="text" class="form-control rounded-4" placeholder="enter mobile number"
+                                        id="phone">
+                                        <div class="errormsg"></div>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-lg-6 mb-4">
+                                    <label for="dob" class="form_label  mb-2">Date of Birth
+                                    </label>
+                                    <input type="date" class="form-control rounded-4" placeholder="select your number"
+                                        id="dob">
+                                        <div class="errormsg"></div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <label for="exampleformcontrolinput1" class="form_label  mb-2">Gender
+                                    </label>
+                                    <div class="d-flex pb-4 mt-3">
+                                        <div class="form-check col-lg-2 me-4">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="malechecked" value="Male">
+                                            <label class="form-check-label" for="malechecked">Male</label>
+                                        </div>
+                                        <div class="form-check col-lg-2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="femchecked" value="Female">
+                                            <label class="form-check-label" for="femchecked">Female</label>
+                                        </div>
+                                    </div>
+                                    <div class="errormsg"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <label for="qualifications" class="form_label  mb-2">Qualifications</label>
+                                    <input type="text" class="form-control rounded-4" placeholder="enter address"
+                                        id="qualifications">
+                                        <div class="errormsg"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <label for="address" class="form_label  mb-2">Address</label>
+                                    <input type="text" class="form-control rounded-4" placeholder="enter address"
+                                        id="address">
+                                        <div class="errormsg"></div>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class=" col-lg-6 mb-4">
+                                    <label for="country" class="form_label mb-2">Country</label>
+                                    <select class="form-control form-select rounded-4" id="country">
+                                        <option >select country</option>
+                                        <option value="INDIA">INDIA</option>
+                                        <option value="USA">USA</option>
+                                        <option value="CHINA">CHINA</option>
+                                    </select>
+                                    <div class="errormsg"></div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <label for="state" class="form_label  mb-2">State</label>
+                                    <select class="form-control form-select rounded-4" id="state">
+                                        <option >select state</option>
+                                        <option value="KERALA">KERALA</option>
+                                        <option value="MUMBAI">MUMBAI</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="WA">WA</option>
+                                        <option value="TX">TX</option>
+                                        <option value="IL">IL</option>
+                                    </select>
+                                    <div class="errormsg"></div>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class=" col-lg-6 mb-4">
+                                    <label for="city" class="form_label mb-2">City</label>
+                                    <input type="text" class="form-control rounded-4 " placeholder="enter city"
+                                        id="city">
+                                        <div class="errormsg"></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="edit-pin" class="form_label  mb-2">zip/pin</label>
+                                    <input type="text" class="form-control rounded-4 mb-3" placeholder="enter pin/zip"
+                                        id="edit-pin">
+                                        <div class="errormsg"></div>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+                                <button class="btn btn-cancel me-md-2 rounded-4 p-3" type="button" onclick="viewEditformClose()">Cancel</button>
+                                <button class="btn btn-primary rounded-4 py-3 px-3 " type="submit" id="subId">Save
+                                    changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>   
+
+        <!-- delete employee detailssss -->
+        <div class="delete_employee" id="viewdeleteData">
+            <div class=" card rounded-3">
+             <form id="confirmDelete">
+                <div class="delete_heading p-3 d-flex">
+                    <h3>Delete Employee</h3>
+                    <button type="button" class="btn close_btn " onclick="viewdeletepageClose()"><i
+                            class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="delete_content px-4">
+                    <p>Are you sure you want to delete this employee?</p>
+                </div>
+                <div class="delete_btn ">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3 px-4 ">
+                        <button class="btn btn-cancel button me-md-2" onclick="viewdeletepageClose()"
+                            type="button">Cancel</button>
+                        <button class="btn btn-danger button" type="submit">Delete</button>
+                    </div>
+                </div>
+             </form>
+            </div>
+        </div>
+
+    </div>
+    <div id="overlay"></div>
+</body>
+    <script src="/javascript/index2.js"></script>
+ 
+    
+</html>

@@ -1,0 +1,158 @@
+<div class="employee_form" id="employeeform">
+    <div class="page col-lg-6 col-md-12 p-0 mt-4 ">
+        <div class="card edit_card rounded-4 ">
+            <header class="heading">
+                <h3 class="basic py-3 px-3 fw-bold">Add Employee</h3>
+                <button type="button" class="btn close_btn m-2" onclick="formClose()"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </header>
+
+            <div class="body  px-4">
+                <label for="form-file" class="upload text-center py-3 mb-4 rounded-3 bg-light">
+                    <i class="upload_icon fa-solid fa-upload fs-4"></i>
+                    <h6 class="form_heading  fw-bold">Upload image</h6>
+                    <p class="m-0">PNG/JPG,files are allowed</p>
+                    <input class="form-control" id="form-file" accept="image/jpg,image/jpeg,image/png"
+                        name="image" type="file" onchange="addImagecall()" >
+
+                    <img src="" id="imagePreview" alt="" height="100px">
+                </label>
+                <form id="form">
+                    <div class="row ">
+                        <div class=" col-md-6 col-lg-4 mb-4">
+                            <label for="Salutation" class="form_label  mb-2">Salutation</label>
+                            <select class="form-control form-select rounded-4" id="Salutation">
+                                <option value="">select</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Mr">Mr</option>
+                                <!-- <option value="Miss">Miss</option> -->
+                            </select>
+                            <div class="errorMsg"></div>
+                        </div>
+
+
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <label for="firstName" class="form_label  mb-2 ">First Name</label>
+                            <input type="text" class="form-control rounded-4" placeholder="john" id="firstName">
+                            <div class="errorMsg"></div>
+                        </div>
+                        <div class=" col-md-12 col-lg-4 mb-4">
+                            <label for="lastName" class="form_label  mb-2">Last Name</label>
+                            <input type="text" class="form-control rounded-4" placeholder="doe" id="lastName">
+                            <div class="errorMsg"></div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class=" col-lg-6 mb-4">
+                            <label for="email" class="form_label mb-2">Email</label>
+                            <input type="text" class="form-control rounded-4" placeholder="mail@simmmple.com"
+                                id="email">
+                                <div class="errorMsg"></div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <label for="phone" class="form_label  mb-2">Mobile Number</label>
+                            <input type="text" class="form-control rounded-4" placeholder="enter mobile number"
+                                id="phone">
+                                <div class="errorMsg"></div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-lg-6 mb-4">
+                            <label for="dob" class="form_label  mb-2">Date of Birth
+                            </label>
+                            <input type="date" class="form-control rounded-4" placeholder="select your number"
+                                id="dob">
+                                <div class="errorMsg"></div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <label for="gender" class="form_label  mb-2" id="gender">Gender
+                            </label>
+                            <div class="d-flex pb-4 mt-3">
+                                <div class="form-check col-lg-2 me-4">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="maleradio">
+                                    <label class="form-check-label" for="maleradio">Male</label>
+                                </div>
+                                <div class="form-check col-lg-2">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="femradio">
+                                    <label class="form-check-label" for="femradio">Female</label>
+                                </div>
+                              
+                            </div>
+                            <div class="errorMsg"></div>
+                        </div>
+                     
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <label for="qualifications" class="form_label  mb-2">Qualifications</label>
+                            <input type="text" class="form-control rounded-4" placeholder="Enter qualifications"
+                                id="qualifications">
+                                <div class="errorMsg"></div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <label for="Password" class="form_label  mb-2">Password</label>
+                            <input type="password" class="form-control rounded-4" placeholder=""
+                                id="Password">
+                                <div class="errorMsg"></div>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <label for="address" class="form_label  mb-2">Address</label>
+                            <input type="text" class="form-control rounded-4" placeholder="enter address"
+                                id="address">
+                                <div class="errorMsg"></div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class=" col-lg-6 mb-4">
+                            <label for="county" class="form_label mb-2">Country</label>
+                            <select class="form-control form-select rounded-4" id="country">
+                                <option value="">select country</option>
+                                <option value="INDIA">INDIA</option>
+                                <option value="USA">USA</option>
+                                <option value="CHINA">CHINA</option>
+                            </select>
+                            <div class="errorMsg"></div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <label for="state" class="form_label  mb-2">State</label>
+                            <select class="form-control form-select rounded-4" id="state">
+                                <option value="">select state</option>
+                                <option value="KERALA">KERALA</option>
+                                <option value="MUMBAI">MUMBAI</option>
+                                <option value="GOA">GOA</option>
+                                <option value="WA">WA</option>
+                                <option value="TX">TX</option>
+                                <option value="IL">IL</option>
+                            </select>
+                            <div class="errorMsg"></div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class=" col-lg-6 mb-4">
+                            <label for="city" class="form_label mb-2">City</label>
+                            <input type="text" class="form-control rounded-4 " placeholder="enter city"
+                                id="city">
+                                <div class="errorMsg"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="exampleformcontrolinput1" class="form_label  mb-2">zip/pin</label>
+                            <input type="text" class="form-control rounded-4 mb-3" placeholder="enter pin/zip"
+                                id="exampleformcontrolinput1">
+                                <div class="errorMsg"></div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+                        <button class="btn btn-cancel me-md-2 rounded-4 p-3" type="button"  onclick="formClose()">cancel</button>
+                        <button onclick="add()" class="btn btn-primary rounded-4 py-3 px-3 " type="button" id="submitButton">Add employee</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
